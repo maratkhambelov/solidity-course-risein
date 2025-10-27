@@ -4,7 +4,62 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_total_vote_to_end",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_title",
+						"type": "string"
+					}
+				],
+				"name": "create",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "new_owner",
+						"type": "address"
+					}
+				],
+				"name": "setOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "choice",
+						"type": "uint8"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +88,11 @@
 	},
 	"sources": {
 		"contracts/Proposal.sol": {
-			"keccak256": "0x0e80ba6138af71034da436a44e89851458eb7972e4f23a2164413d1b86d93bd0",
+			"keccak256": "0x0d5b243b06061ffe93e5bf1488fe8ab3b86e8cf985c986f063c9acfce957fea1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4f556aec194c532d50c6f4dfd8a49ac6f7140a176e0f1a582b37ef233a55c7e5",
-				"dweb:/ipfs/QmbZ1NEYyBWPCBwNMEf2FJYmjGwDj4drN7zXhhY345cDCR"
+				"bzz-raw://dc814aae206550ee61de2325cf8d9364f3f391d6080a8d80c459905ec62bc9b9",
+				"dweb:/ipfs/QmUB7dc1uGuCZnEUvfNKFVFBx5f42BAViDfqNzRKfsHwXg"
 			]
 		}
 	},
