@@ -34,6 +34,141 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getCurrentProposal",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "approve",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reject",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pass",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "total_vote_to_end",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "current_state",
+								"type": "bool"
+							},
+							{
+								"internalType": "bool",
+								"name": "is_active",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							}
+						],
+						"internalType": "struct ProposalContract.Proposal",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "getProposal",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "approve",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reject",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pass",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "total_vote_to_end",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "current_state",
+								"type": "bool"
+							},
+							{
+								"internalType": "bool",
+								"name": "is_active",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							}
+						],
+						"internalType": "struct ProposalContract.Proposal",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "isVoted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -42,6 +177,13 @@
 					}
 				],
 				"name": "setOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "terminateProposal",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -88,11 +230,11 @@
 	},
 	"sources": {
 		"contracts/Proposal.sol": {
-			"keccak256": "0x0d5b243b06061ffe93e5bf1488fe8ab3b86e8cf985c986f063c9acfce957fea1",
+			"keccak256": "0x309bd6518c959f4628958dab3b1dbe3e5bc034a7cefe560eb13fdaa2b5e53835",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dc814aae206550ee61de2325cf8d9364f3f391d6080a8d80c459905ec62bc9b9",
-				"dweb:/ipfs/QmUB7dc1uGuCZnEUvfNKFVFBx5f42BAViDfqNzRKfsHwXg"
+				"bzz-raw://863f5ce19093310d4ba8066d2ae3cca3d3f6994e60ddc6591ae15ee45d43ce92",
+				"dweb:/ipfs/QmaTbGej7bYiRKXTm79NRsP1PDEpxNXQvG9NKBqUj14Pbh"
 			]
 		}
 	},

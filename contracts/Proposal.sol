@@ -19,7 +19,6 @@ contract ProposalContract {
 
     mapping(uint256 => Proposal) proposal_history; // Recordings of previous proposals
     address[] private voted_addresses; 
-    mapping(address => bool) private hasVoted;
 
 
     //constructor
@@ -44,8 +43,13 @@ contract ProposalContract {
         _;
     }
 
-    function isVoted(address _address) private view returns(bool) {
-        return hasVoted[_address];
+    function isVoted(address _address) public view returns (bool) {
+        for (uint i = 0; i < voted_addresses.length; i++) {
+            if (voted_addresses[i] == _address) {
+                return true;
+            }
+        }
+        return false;
     }
 
     function setOwner(address new_owner) external onlyOwner {
@@ -79,6 +83,11 @@ contract ProposalContract {
             voted_addresses = [owner];
         }
     }
+
+    function terminateProposal() external onlyOwner active {
+        proposal_history[counter].is_active = false;
+    }
+
     function calculateCurrentState() private view returns(bool) {
         Proposal storage proposal = proposal_history[counter];
 
@@ -98,6 +107,10 @@ contract ProposalContract {
             return false;
         }
     }
-
-
+    function getCurrentProposal() external view returns(Proposal memory) {
+        return proposal_history[counter];
+    }
+    function getProposal(uint256 number) external view returns(Proposal memory) {
+        return proposal_history[number];
+    }
 }
